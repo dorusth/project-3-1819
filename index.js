@@ -4,6 +4,9 @@ const port = process.env.PORT || 3030;
 const exphbs = require('express-handlebars')
 const bodyParser = require('body-parser')
 const compression = require('compression')
+const jquery = require('jquery')
+var http = require('http').Server(app);
+var io = require('socket.io')(http);
 require('dotenv').config()
 
 
@@ -40,4 +43,6 @@ app.get('*', (req, res) => {
 	res.render('logs')
 })
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+http.listen(3030, function(){
+  console.log('listening on *:3000');
+});
