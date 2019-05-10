@@ -1,34 +1,49 @@
 # Project 3 @cmda-minor-web · 2018-2019
 
-## Design for Real-Time
-Het project vindt plaats bij in ons eigen lokaal. Maandagochtend is om 9.30 uur de kickoff (bij de oprachtgever), vrijdag zijn de presentaties van de resultaten (bij de opdrachtgever). In een week bouwt iedere student een eigen prototype ter onderbouwing van aanbevelingen aan de opdrachtgevers (CERN & Lifely). De aanbevelingen betreffen het designen voor Real-Time web applicaties. Technieken geleerd bij [Web Design](https://github.com/cmda-minor-web/web-design-1819) en [Real-Time Web](https://github.com/cmda-minor-web/real-time-web-1819) worden toegepast bij het bouwen van de de prototypes en et schrijven van de aanbevelingen.
+## CERN Jiskefet
+Jiskefet is a tool to display data from CERN's ALICE project.
 
-## Programma
-Maandag - 9.30 - kickoff
-Woensdag - voortgangbespreking
-Vrijdag presentatie
+We've been given the task to add a feature to the [Jiskefet](http://cmd.jiskefet.io) system that was build by students from HvA ICT
 
-## Werkwijze en Criteria
-### Werkwijze
-Full-time week werken aan prototypes / proof of concepts over designen voor real-time web applicaties. Vrijdag is de pitch! Student laat zien dat hij/zij de vakken [Web Design](https://github.com/cmda-minor-web/web-design-1819) en [Real-Time Web](https://github.com/cmda-minor-web/real-time-web-1819) begrijpt en beheerst.
+![app](readme-img/app.png)
 
-Iedere dag zijn er coaches aanwezig voor coaching en feedback. We sluiten de dag af met een stand up, om de status door te spreken. Waar ben je mee bezig? Loop je ergens vast of heb je hulp nodig? Waar sta je?
+## Table of contents
+- [Concept](#Concept - Real-time notifications)
+  - [Notifications](#Notifications)
+  - [Badges](#Badges)
+- [Demo](#Demo)
+- [Installation](#Installation)
 
-### Beoordeling
-Tijdens de beoordeling krijg je feedback op het resultaat en op je functioneren. De vakdocenten beoordelen In hoeverre je in het project laten zien dat je de bijhorende vakken beheerst en goed hebt toegepast. De opdrachtgver is geïnteresseerd in hoeverre je oplossing voldoet aan de eisen die zijzelf stellen aan hun producten. Misschien laat je wel wat zien waar ze zelf nog niet aan gedacht hebben?
+## Concept - Real-time notifications
+For the Jiskefet system i've made a feature to get info about the real-time data from ALICE using WebSockets.
 
-Het project telt als AVV mee met de Meesterproef.
+During runs there is a lot of data added to the system which would clutter the screen if added immediately, for this i've added notifications to show the users the amount of new runs and logs that were added since opening the page and the option to show the new data.
 
-### Feedback over functioneren
-Je hebt een leergierig, gedreven en zelfredzame houding nodig om de minor te kunnen halen. Welke vaardigheden heb je laten zien? Onderzoekend vermogen? Creativiteit? Conceptueel? In hoeverre komen je houding en verworven vaardigheden overeen met wat een frontender in de praktijk nodig heeft?
+### Notifications
+![notifications](readme-img/notification.png)
+On the server data is recieved and the information about the amount of updates is sent to the client. on the client side a check is made to see of there are more logs/runs than are shown to the client. If there is new data a notification is shown to the user with the amount of new logs/runs.
 
-### Web Design
-Het vak [Web Design](https://github.com/cmda-minor-web/web-design-1819) gaat over het ontwerpen en testen van Interactie. Het voordeel van een Frontend Developer (of Web Designer) is dat die techniek begrijpt, kan toepassen én verstand heeft van UX en design. Als je Web technieken begrijpt kun je je ideeën snel prototypen en testen met echte gebruikers, in een browser. Je kan dan aanpassingen doorvoeren, uitproberen en weer testen
+### Badges
+![badges](readme-img/notification.png)
+When the user receives new data and the notification is shown there ar also badges shown in the according menu item on the left side of the page as an indication to the user.
 
-### Real-Time Web
-Het vak [Real-Time Web](https://github.com/cmda-minor-web/real-time-web-1819) gaat over het bouwen van een betekenisvolle real-time applicatie. Hierin leer je hoe je een open verbinding (web socket) opzet tussen de client en de server. En hoe je in real-time data biede kanten op kunt versturen.
+## Demo
+[Demo](https://twitlang.herokuapp.com/)|[Repo](https://github.com/dorusth/project-3-1819)
 
-### Oplevering & criteria
-- Presentatie met je bevindingen bij de opdrachtgever. 
-- Github met je code en readme.
+## Installation
+This project works with: node, express, Handlebars, socket.io and compression.
+Clone the repo with:
+```bash
+$ git clone https://github.com/dorusth/project-3-1819.git
+```
+to use the app use
+```bash
+$ cd project-3-1819/week-2-3
+$ npm install
+$ npm start / $ npm run dev
+```
+and open "http://localhost:3030/"
 
+
+
+[MIT](LICENCE) © [Dorus ten Haaf](https://dorustenhaaf.com)

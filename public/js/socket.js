@@ -49,6 +49,7 @@ function notify (){
 		time = hours() + ":" + minutes();
 		let notification =  document.createElement("div")
 		notification.classList.add("alert", "alert-primary", "container-fluid", "notification")
+		notification.setAttribute('aria-live', 'polite')
 		document.querySelector(".container-fluid").prepend(notification)
 	}
 	document.querySelector(".notification").innerHTML = `
