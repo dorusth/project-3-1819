@@ -54,7 +54,7 @@ app.get('*', (req, res) => {
 	res.render('logs')
 })
 
-http.listen(3030, function(){
+http.listen(port, function(){
   console.log('listening on *:3000');
 });
 
