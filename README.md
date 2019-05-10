@@ -24,7 +24,7 @@ During runs there is a lot of data added to the system which would clutter the s
 On the server data is recieved and the information about the amount of updates is sent to the client. on the client side a check is made to see of there are more logs/runs than are shown to the client. If there is new data a notification is shown to the user with the amount of new logs/runs.
 
 ### Badges
-![badges](readme-img/notification.png)
+![badges](readme-img/badge.png)
 When the user receives new data and the notification is shown there ar also badges shown in the according menu item on the left side of the page as an indication to the user.
 
 ## Demo
