@@ -28,7 +28,7 @@ On the server data is recieved and the information about the amount of updates i
 When the user receives new data and the notification is shown there ar also badges shown in the according menu item on the left side of the page as an indication to the user.
 
 ## Demo
-[Demo](https://twitlang.herokuapp.com/)|[Repo](https://github.com/dorusth/project-3-1819)
+[Demo](https://jiskefet-alice.herokuapp.com/)|[Repo](https://github.com/dorusth/project-3-1819)
 
 ## Installation
 This project works with: node, express, Handlebars, socket.io and compression.
