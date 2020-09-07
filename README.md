@@ -8,11 +8,14 @@ We've been given the task to add a feature to the [Jiskefet](http://cmd.jiskefet
 ![app](readme-img/app.png)
 
 ## Table of contents
+- [Demo](#Demo)
 - [Concept](#Concept - Real-time notifications)
   - [Notifications](#Notifications)
   - [Badges](#Badges)
-- [Demo](#Demo)
 - [Installation](#Installation)
+
+## Demo
+[Demo](https://jiskefet-alice.herokuapp.com/)|[Repo](https://github.com/dorusth/project-3-1819)
 
 ## Concept - Real-time notifications
 For the Jiskefet system i've made a feature to get info about the real-time data from ALICE using WebSockets.
@@ -26,9 +29,6 @@ On the server data is recieved and the information about the amount of updates i
 ### Badges
 ![badges](readme-img/badge.png)
 When the user receives new data and the notification is shown there ar also badges shown in the according menu item on the left side of the page as an indication to the user.
-
-## Demo
-[Demo](https://jiskefet-alice.herokuapp.com/)|[Repo](https://github.com/dorusth/project-3-1819)
 
 ## Installation
 This project works with: node, express, Handlebars, socket.io and compression.
